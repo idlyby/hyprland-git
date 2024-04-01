@@ -11,6 +11,7 @@ url="https://github.com/hyprwm/Hyprland"
 license=(BSD)
 depends=(
   cairo
+  cpio
   gcc-libs
   glib2
   glibc
