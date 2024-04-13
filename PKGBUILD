@@ -3,7 +3,7 @@
 # Contributor: ThatOneCalculator <kainoa at t1c dot dev>
 
 pkgname=hyprland-git
-pkgver=0.35.0.r104.bc3f5b94
+pkgver=0.38.0.r105.582d6233
 pkgrel=1
 pkgdesc="A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks."
 arch=(x86_64 aarch64)
@@ -62,7 +62,7 @@ provides=("hyprland=${pkgver%%.r*}")
 conflicts=(hyprland)
 source=(
   "git+https://github.com/hyprwm/Hyprland.git"
-  "git+https://gitlab.freedesktop.org/wlroots/wlroots.git"
+  "git+https://github.com/hyprwm/wlroots-hyprland.git"
   "git+https://github.com/hyprwm/hyprland-protocols.git"
   "git+https://github.com/canihavesomecoffee/udis86.git"
   "git+https://github.com/wolfpld/tracy.git"
@@ -82,7 +82,7 @@ pick_mr() {
 prepare() {
   cd Hyprland
   git submodule init
-  git config submodule.wlroots.url "$srcdir/wlroots"
+  git config submodule.subprojects/wlroots-hyprland.url "$srcdir/wlroots-hyprland"
   git config submodule.subprojects/hyprland-protocols.url "$srcdir/hyprland-protocols"
   git config submodule.subprojects/udis86.url "$srcdir/udis86"
   git config submodule.subprojects/tracy.url "$srcdir/tracy"
@@ -93,8 +93,8 @@ prepare() {
   fi
   # Pick pull requests from github using `pick_mr <pull request number>`.
 
-  git -C subprojects/wlroots reset --hard
-  sed -E -i -e "s/(soversion = .*$)/soversion = 13032/g" subprojects/wlroots/meson.build
+  git -C subprojects/wlroots-hyprland reset --hard
+  sed -E -i -e "s/(soversion = .*$)/soversion = 13032/g" subprojects/wlroots-hyprland/meson.build
 }
 
 pkgver() {
