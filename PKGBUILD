@@ -18,6 +18,7 @@ depends=(
   glslang
   hyprlang
   hyprcursor
+  hyprwayland-scanner
   libdisplay-info
   libdrm
   libglvnd
