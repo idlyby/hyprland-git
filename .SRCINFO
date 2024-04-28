@@ -22,6 +22,7 @@ pkgbase = hyprland-git
 	depends = glslang
 	depends = hyprlang
 	depends = hyprcursor
+	depends = hyprwayland-scanner
 	depends = libdisplay-info
 	depends = libdrm
 	depends = libglvnd
