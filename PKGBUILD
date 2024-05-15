@@ -95,7 +95,6 @@ prepare() {
   # Pick pull requests from github using `pick_mr <pull request number>`.
 
   git -C subprojects/wlroots-hyprland reset --hard
-  sed -E -i -e "s/(soversion = .*$)/soversion = 13032/g" subprojects/wlroots-hyprland/meson.build
 }
 
 pkgver() {
@@ -127,15 +126,9 @@ package() {
     --destdir "$pkgdir" \
     --skip-subprojects hyprland-protocols
 
-  mkdir "$pkgdir/usr/include/hyprland/wlroots"
-  mv "$pkgdir/usr/include/wlr" "$pkgdir/usr/include/hyprland/wlr"
-
-  # resolve conflicts with system wlr
-  rm -f "$pkgdir/usr/lib/libwlroots.so"
-  rm -rf "$pkgdir/usr/lib/pkgconfig"
-
+  # NOTE: does "/usr/lib/libwlroots.a" have any significance ?
+  
   # FIXME: remove after xdg-desktop-portal-hyprland disowns hyprland-portals.conf
-
   rm -rf "$pkgdir/usr/share/xdg-desktop-portal"
 
   # license
