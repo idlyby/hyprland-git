@@ -16,8 +16,8 @@ depends=(
   glib2
   glibc
   glslang
-  hyprlang
   hyprcursor
+  hyprlang
   hyprwayland-scanner
   libdisplay-info
   libdrm
@@ -30,6 +30,7 @@ depends=(
   libxfixes
   libxkbcommon
   libxrender
+  mesa
   opengl-driver
   pango
   pixman
@@ -42,6 +43,7 @@ depends=(
   xcb-proto
   xcb-util
   xcb-util-errors
+  xcb-util-image
   xcb-util-keysyms
   xcb-util-renderutil
   xcb-util-wm
@@ -125,8 +127,6 @@ package() {
   meson install -C build \
     --destdir "$pkgdir" \
     --skip-subprojects hyprland-protocols
-
-  # NOTE: does "/usr/lib/libwlroots.a" have any significance ?
   
   # FIXME: remove after xdg-desktop-portal-hyprland disowns hyprland-portals.conf
   rm -rf "$pkgdir/usr/share/xdg-desktop-portal"
