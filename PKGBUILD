@@ -3,7 +3,7 @@
 # Contributor: ThatOneCalculator <kainoa at t1c dot dev>
 
 pkgname=hyprland-git
-pkgver=0.39.1.r105.5e6f7b1c
+pkgver=0.40.0.r160.c95845b1
 pkgrel=1
 pkgdesc="A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks."
 arch=(x86_64 aarch64)
@@ -18,7 +18,7 @@ depends=(
   glslang
   hyprcursor
   hyprlang
-  hyprwayland-scanner
+  'hyprwayland-scanner>=0.3.10'
   libdisplay-info
   libdrm
   libglvnd
