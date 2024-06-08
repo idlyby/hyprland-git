@@ -18,7 +18,7 @@ depends=(
   glslang
   hyprcursor
   hyprlang
-  'hyprwayland-scanner>=0.3.10'
+  hyprwayland-scanner-git
   libdisplay-info
   libdrm
   libglvnd
