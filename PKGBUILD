@@ -16,9 +16,9 @@ depends=(
   glib2
   glibc
   glslang
-  hyprcursor
-  hyprlang
   hyprutils-git
+  hyprcursor-git
+  hyprlang-git
   hyprwayland-scanner-git
   libdisplay-info
   libdrm
