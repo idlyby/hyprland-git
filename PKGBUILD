@@ -128,8 +128,7 @@ package() {
   cd Hyprland
 
   meson install -C build \
-    --destdir "$pkgdir" \
-    --skip-subprojects hyprland-protocols
+    --destdir "$pkgdir"
   
   # FIXME: remove after xdg-desktop-portal-hyprland disowns hyprland-portals.conf
   rm -rf "$pkgdir/usr/share/xdg-desktop-portal"
