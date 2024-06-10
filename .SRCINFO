@@ -10,6 +10,7 @@ pkgbase = hyprland-git
 	makedepends = gdb
 	makedepends = git
 	makedepends = jq
+	makedepends = make
 	makedepends = meson
 	makedepends = ninja
 	makedepends = pkgconf

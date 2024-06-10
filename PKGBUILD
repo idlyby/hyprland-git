@@ -57,6 +57,7 @@ makedepends=(
   gdb
   git
   jq
+  make
   meson
   ninja
   pkgconf
