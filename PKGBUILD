@@ -11,7 +11,6 @@ url="https://github.com/hyprwm/Hyprland"
 license=(BSD)
 depends=(
   cairo
-  cpio
   gcc-libs
   glib2
   glibc
@@ -63,6 +62,11 @@ makedepends=(
   patch
   pkgconf
   xorgproto
+)
+optdepends=(
+  'cmake: to build and install plugins using hyprpm'
+  'cpio: to build and install plugins using hyprpm'
+  'meson: to build and install plugins using hyprpm'
 )
 provides=("hyprland=${pkgver%%.r*}")
 conflicts=(hyprland)
