@@ -110,11 +110,12 @@ build() {
   cd Hyprland
 
   meson setup build \
+    --wipe \
     --prefix     /usr \
     --libexecdir lib \
-    --sbindir    bin \
     --buildtype  release \
     --wrap-mode  nodownload \
+    -D           warning_level=0 \
     -D           b_lto=true \
     -D           b_pie=true \
     -D           default_library=shared \
@@ -127,9 +128,8 @@ build() {
 package() {
   cd Hyprland
 
-  meson install -C build \
-    --destdir "$pkgdir"
-  
+  meson install -C build --destdir "$pkgdir"
+
   # FIXME: remove after xdg-desktop-portal-hyprland disowns hyprland-portals.conf
   rm -rf "$pkgdir/usr/share/xdg-desktop-portal"
 
