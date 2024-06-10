@@ -115,16 +115,16 @@ build() {
 
   meson setup build \
     --wipe \
-    --prefix     /usr \
+    --prefix /usr \
     --libexecdir lib \
-    --buildtype  release \
-    --wrap-mode  nodownload \
-    -D           warning_level=0 \
-    -D           b_lto=true \
-    -D           b_pie=true \
-    -D           default_library=shared \
-    -D           xwayland=enabled \
-    -D           systemd=enabled
+    --buildtype release \
+    --wrap-mode nodownload \
+    -D warning_level=0 \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D default_library=shared \
+    -D xwayland=enabled \
+    -D systemd=enabled
 
   meson compile -C build
 }
