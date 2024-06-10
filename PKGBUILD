@@ -16,10 +16,10 @@ depends=(
   glib2
   glibc
   glslang
-  hyprutils-git
-  hyprcursor-git
-  hyprlang-git
-  hyprwayland-scanner-git
+  hyprutils
+  hyprcursor
+  hyprlang
+  hyprwayland-scanner
   libdisplay-info
   libdrm
   libglvnd
