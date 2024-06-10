@@ -60,6 +60,7 @@ makedepends=(
   make
   meson
   ninja
+  patch
   pkgconf
   xorgproto
 )
