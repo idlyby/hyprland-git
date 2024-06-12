@@ -110,6 +110,7 @@ pkgver() {
 build() {
   cd Hyprland
 
+  export CXXFLAGS="-w" # suppress all compiler warnings
   meson setup build \
     --wipe \
     --prefix /usr \
