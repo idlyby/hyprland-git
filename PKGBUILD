@@ -93,6 +93,7 @@ prepare() {
   git config submodule.subprojects/wlroots-hyprland.url "$srcdir/wlroots-hyprland"
   git config submodule.subprojects/hyprland-protocols.url "$srcdir/hyprland-protocols"
   git config submodule.subprojects/udis86.url "$srcdir/udis86"
+  git config submodule.subprojects/tracy.update none
   git -c protocol.file.allow=always submodule update
 
   if [[ -z "$(git config --get user.name)" ]]; then
