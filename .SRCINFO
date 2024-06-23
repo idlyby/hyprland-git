@@ -55,11 +55,10 @@ pkgbase = hyprland-git
 	depends = xcb-util-wm
 	depends = xorg-xinput
 	depends = xorg-xwayland
-	depends = libdisplay-info.so
 	optdepends = cmake: to build and install plugins using hyprpm
 	optdepends = cpio: to build and install plugins using hyprpm
 	optdepends = meson: to build and install plugins using hyprpm
-	provides = hyprland=0.40.0
+	provides = hyprland=0.41.1
 	conflicts = hyprland
 	source = git+https://github.com/hyprwm/Hyprland.git
 	source = git+https://github.com/hyprwm/wlroots-hyprland.git
