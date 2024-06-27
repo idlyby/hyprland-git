@@ -53,7 +53,6 @@ pkgbase = hyprland-git
 	depends = xcb-util-keysyms
 	depends = xcb-util-renderutil
 	depends = xcb-util-wm
-	depends = xorg-xinput
 	depends = xorg-xwayland
 	optdepends = cmake: to build and install plugins using hyprpm
 	optdepends = cpio: to build and install plugins using hyprpm
