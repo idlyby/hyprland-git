@@ -3,7 +3,7 @@
 # Contributor: ThatOneCalculator <kainoa at t1c dot dev>
 
 pkgname=hyprland-git
-pkgver=0.41.2.r49.016da234
+pkgver=0.41.2.r50.cf373d31
 pkgrel=1
 pkgdesc="A dynamic tiling Wayland compositor based on aquamarine that doesn't sacrifice on its looks."
 arch=(x86_64 aarch64)
@@ -27,6 +27,7 @@ depends=(
   libx11
   libxcb
   libxcomposite
+  libxcursor
   libxfixes
   libxkbcommon
   libxrender
