@@ -10,7 +10,7 @@ arch=(x86_64 aarch64)
 url="https://github.com/hyprwm/Hyprland"
 license=(BSD)
 depends=(
-  aquamarine-git
+  aquamarine
   cairo
   gcc-libs
   glib2
