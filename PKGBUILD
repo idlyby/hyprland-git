@@ -1,5 +1,6 @@
-# Maintainer: FabioLolix
-# Maintainer: éclairevoyant
+# Maintainer: Edward Davis <idlyby@proton.me>
+# Contributor: FabioLolix
+# Contributor: éclairevoyant
 # Contributor: ThatOneCalculator <kainoa at t1c dot dev>
 
 pkgname=hyprland-git
